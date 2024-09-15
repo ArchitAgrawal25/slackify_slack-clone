@@ -6,7 +6,7 @@ import {
     joinChannel,
     leaveChannel,
     getChannelUsers
-} from "../controllers/channel.controller.js"
+} from "../controllers/channelControllers.js"
 
 const router = Router()
 
