@@ -1,6 +1,6 @@
 import { asyncHandler } from "../utils/asyncHandler.js";
-import {Channel} from "../models/channel.model.js"
-import {User} from "../models/user.model.js"
+import {Channel} from "../models/channelModel.js"
+import {User} from "../models/userModel.js"
 
 
 const createChannel = asyncHandler( async (req,res) => {

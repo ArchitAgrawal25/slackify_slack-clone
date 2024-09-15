@@ -1,6 +1,6 @@
 
 import { asyncHandler } from "../utils/asyncHandler.js";
-import {Message} from "../models/message.model.js"
+import {Message} from "../models/messageModel.js"
 
 
 const getChannelMessage = asyncHandler( async (req,res) =>  {

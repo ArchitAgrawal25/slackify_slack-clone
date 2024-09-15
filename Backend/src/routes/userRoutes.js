@@ -6,7 +6,7 @@ import {
     logoutUser,
     getUserProfile,
     getUserChannels
-} from "../controllers/user.controller.js"
+} from "../controllers/userController.js"
 
 
 const router = Router()
