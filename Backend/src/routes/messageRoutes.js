@@ -1,11 +1,12 @@
-import { Router } from "express";
-import isLoggedIn from "../middlewares/isLoggedIn.js";
-import {
+const express = require('express');
+const Router = express.Router;
+const isLoggedIn = require('../middlewares/isLoggedIn.js');
+const {
     getChannelMessage,
     addMessage,
     deleteMessage,
     updateMessage
-} from "../controllers/messageController.js"
+} = require('../controllers/messageController.js');
 
 const router = Router()
 
@@ -16,4 +17,4 @@ router.route("/:channelId/messages").get(getChannelMessage).post(addMessage);
 router.route("/:channelId/:messageId").delete(deleteMessage).patch(updateMessage);
 
 
-export default router
+module.exports= router

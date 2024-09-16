@@ -1,6 +1,5 @@
-
-import { asyncHandler } from "../utils/asyncHandler.js"
-import {User} from "../models/userModel.js"
+const asyncHandler = require('../utils/asyncHandler.js');
+const User = require('../models/userModel.js');
 
 const registerUser = asyncHandler( async (req,res) => {
     const { fullName, email, username, password} = req.body;
@@ -111,4 +110,4 @@ const getUserChannels = asyncHandler( async (req,res) => {
     return res.status(200).json({ channels: user.channels, message: "Fetched user channels successfully" });
 })
 
-export {registerUser, loginUser, logoutUser, getUserProfile, getUserChannels}
+module.exports= {registerUser, loginUser, logoutUser, getUserProfile, getUserChannels}

@@ -29,9 +29,9 @@ app.use(cookieParser())
 
 
 // routes import 
-import userRouter from "./routes/userRoutes.js"
-import messageRouter from "./routes/messageRoutes.js"
-import channelRouter from "./routes/channelRoutes.js"
+const userRouter = require("./routes/userRoutes.js")
+const messageRouter = require("./routes/messageRoutes.js")
+const channelRouter = require("./routes/channelRoutes.js")
 
 
 

@@ -1,12 +1,13 @@
-import { Router } from "express";
-import isLoggedIn from "../middlewares/isLoggedIn.js";
-import {
+const express = require('express');
+const Router = express.Router;
+const isLoggedIn = require('../middlewares/isLoggedIn.js');
+const {
     createChannel,
     getChannel,
     joinChannel,
     leaveChannel,
     getChannelUsers
-} from "../controllers/channelControllers.js"
+} = require('../controllers/channelControllers.js');
 
 const router = Router()
 
@@ -19,4 +20,4 @@ router.post('/:userId/:channelId/leave', leaveChannel);
 router.get('/:channelId/users', getChannelUsers);
 
 
-export default router
+module.exports= router

@@ -1,6 +1,5 @@
-
-import { asyncHandler } from "../utils/asyncHandler.js";
-import {Message} from "../models/messageModel.js"
+const asyncHandler = require('../utils/asyncHandler.js');
+const Message = require('../models/messageModel.js');
 
 
 const getChannelMessage = asyncHandler( async (req,res) =>  {
@@ -73,4 +72,5 @@ const updateMessage = asyncHandler( async (req,res) =>  {
     })
 })
 
-export {getChannelMessage, addMessage, deleteMessage, updateMessage}
+
+module.exports= {getChannelMessage, addMessage, deleteMessage, updateMessage}

@@ -1,12 +1,13 @@
-import { Router } from "express";
-import isLoggedIn from "../middlewares/isLoggedIn.js";
-import {
+const express = require('express');
+const Router = express.Router;
+const isLoggedIn = require('../middlewares/isLoggedIn.js');
+const {
     registerUser,
     loginUser,
     logoutUser,
     getUserProfile,
     getUserChannels
-} from "../controllers/userController.js"
+} = require('../controllers/userController.js');
 
 
 const router = Router()
@@ -19,4 +20,4 @@ router.route("/:username").get(getUserProfile)
 router.get('/:userId/channels', getUserChannels);
 
 
-export default router
+module.exports= router

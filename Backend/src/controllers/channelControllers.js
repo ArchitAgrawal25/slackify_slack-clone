@@ -1,7 +1,6 @@
-import { asyncHandler } from "../utils/asyncHandler.js";
-import {Channel} from "../models/channelModel.js"
-import {User} from "../models/userModel.js"
-
+const asyncHandler = require('../utils/asyncHandler.js');
+const Channel = require('../models/channelModel.js');
+const User = require('../models/userModel.js');
 
 const createChannel = asyncHandler( async (req,res) => {
     const {channelName} = req.body;
@@ -110,4 +109,4 @@ const getChannelUsers = asyncHandler( async (req,res) => {
 })
 
 
-export {createChannel, getChannel, joinChannel, leaveChannel, getChannelUsers}
+module.exports= {createChannel, getChannel, joinChannel, leaveChannel, getChannelUsers}
