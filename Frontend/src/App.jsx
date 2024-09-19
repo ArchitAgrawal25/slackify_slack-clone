@@ -7,7 +7,7 @@ import Sidebar from "./components/SideBar"
 function App() {
   return (
     <>
-    <Sidebar />
+    <SignUp />
     </>
   )
 }
